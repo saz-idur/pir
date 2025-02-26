@@ -1,0 +1,13 @@
+services:
+  - type: managed
+    name: study-motivator-agent
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: starter
+    region: eu-west
+    ports:
+      - port: 8080
+        protocol: http
+    envVars:
+      - name: GEMINI_API_KEY
+        value: ""
